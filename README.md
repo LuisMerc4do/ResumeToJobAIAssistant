@@ -127,3 +127,4 @@ Stripe: For seamless payment processing and subscription management.
 LangChain & Pinecone: For AI memory and vector storage solutions.
 Prisma: For simplifying database management with a type-safe ORM.
 Vercel: For effortless deployment and hosting.
+
