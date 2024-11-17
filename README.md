@@ -1,39 +1,129 @@
-![Captura de pantalla 2024-07-02 232706](https://github.com/LuisMerc4do/ResumetojobAI/assets/163725779/54d071cf-0606-4c81-a83a-f2cce95a1a57)
-![Captura de pantalla 2024-07-02 232025](https://github.com/LuisMerc4do/ResumetojobAI/assets/163725779/505d4111-3f8a-4c84-be12-baee989223e0)
-![Captura de pantalla 2024-07-02 232125](https://github.com/LuisMerc4do/ResumetojobAI/assets/163725779/9954dd1a-7061-4f3c-91f8-d59b2e371930)
-This project represents a complete, end-to-end SaaS application built with modern technologies and best practices. It is designed to be scalable, user-friendly, and efficient, providing a solid foundation for any SaaS business. Create with nextjs and typescript
+# 🚀 SaaS Application
+
+A complete, end-to-end SaaS application built from scratch using modern technologies and best practices. This project is designed to be scalable, user-friendly, and efficient, offering a strong foundation for any SaaS business.
+
+## Overview
+
+This project features a robust SaaS platform with a beautiful landing page, flexible subscription plans, real-time API streaming, and advanced AI capabilities. It leverages cutting-edge technologies to provide an exceptional user experience and efficient backend processing.
 
 ## Features
-Complete SaaS Built From Scratch: A robust and scalable SaaS application developed from the ground up.
 
-Beautiful Landing Page & Pricing Page Included: Attractive and responsive landing and pricing pages designed to engage users and convert leads.
+- **Complete SaaS Built From Scratch**: A full-fledged, scalable SaaS application designed for businesses.
+- **Beautiful Landing Page & Pricing Page**: Attractive and responsive landing and pricing pages crafted to engage users and convert leads.
+- **Free & Pro Plan Using Stripe**: Seamless integration with Stripe for subscription management, supporting both free and pro plans.
+- **Highly Functional PDF Viewer**: An intuitive and user-friendly PDF viewer for enhanced document interactions.
+- **Real-Time API Streaming**: Provides real-time streaming of API responses for a dynamic and engaging user experience.
+- **Authentication Using Kinde**: Secure and efficient user authentication with Kinde.
+- **Modern UI with 'shadcn-ui'**: A sleek and responsive user interface built using 'shadcn-ui'.
+- **Optimistic UI Updates**: Smooth user experience with optimistic UI updates.
+- **Infinite Message Loading**: Efficient infinite loading for enhanced performance in message-heavy components.
+- **Drag and Drop File Uploads**: Intuitive drag-and-drop functionality for easy file uploads.
+- **Instant Loading States**: Quick feedback to users through instant loading indicators.
+- **Modern Data Fetching Using tRPC & Zod**: Type-safe and efficient data fetching with tRPC and Zod.
+- **AI Memory with LangChain**: Advanced AI memory management powered by LangChain.
+- **Vector Storage Using Pinecone**: Scalable vector storage solutions with Pinecone.
+- **Prisma as ORM**: Robust database management using Prisma for type-safe interactions.
+- **100% Written in TypeScript**: Fully developed with TypeScript for better maintainability and scalability.
 
-Free & Pro Plan Using Stripe: Seamless integration with Stripe for handling subscriptions and payments, supporting both free and pro plans.
+## Technologies Used
 
-A Beautiful And Highly Functional PDF Viewer: An intuitive and user-friendly PDF viewer to enhance document interactions.
+- **Frontend**: Next.js, TypeScript, Shadcn UI
+- **Authentication**: Kinde
+- **Payment Integration**: Stripe
+- **Database**: Prisma (using PostgreSQL or any supported database)
+- **Data Fetching**: tRPC, Zod
+- **AI Memory**: LangChain
+- **Vector Storage**: Pinecone
+- **File Uploads**: Drag-and-drop functionality
+- **PDF Viewing**: Custom PDF viewer
+- **Deployment**: Vercel
 
-Streaming API Responses in Real-Time: Real-time streaming of API responses for a dynamic user experience.
+## 🚀 Getting Started
 
-Authentication Using Kinde: Secure and efficient user authentication managed by Kinde.
+### Prerequisites
 
-Clean, Modern UI Using 'shadcn-ui': A sleek and modern user interface designed with 'shadcn-ui'.
+- [Node.js](https://nodejs.org/en/download/) (LTS version recommended)
+- [Stripe Account](https://stripe.com/) (for payment integration)
+- [Kinde Account](https://kinde.com/) (for authentication)
+- [PostgreSQL](https://www.postgresql.org/) (or any database supported by Prisma)
+- [Git](https://git-scm.com/)
 
-Optimistic UI Updates for a Great UX: Implementing optimistic UI updates to provide a smooth and responsive user experience.
+### Clone the Repository
 
-Infinite Message Loading for Performance: Efficient infinite loading for messages to optimize performance.
+```
+git clone https://github.com/your-username/SaaS-Application.git
+cd SaaS-Application
+```
+Install the project dependencies:
 
-Intuitive Drag n’ Drop Uploads: Easy-to-use drag and drop functionality for uploading files.
+```
+npm install
+```
 
-Instant Loading States: Immediate feedback through instant loading states.
+Configure environment variables:
 
-Modern Data Fetching Using tRPC & Zod: Efficient and type-safe data fetching with tRPC and Zod.
+Create a .env file based on .env.example and provide the required API keys and configuration settings:
 
-LangChain for Infinite AI Memory: Advanced AI memory management using LangChain.
+```
+DATABASE_URL=your-database-url
+STRIPE_SECRET_KEY=your-stripe-secret-key
+KIND_AUTH_KEY=your-kinde-auth-key
+PINECONE_API_KEY=your-pinecone-api-key
+```
 
-Pinecone as our Vector Storage: Utilizing Pinecone for scalable vector storage solutions.
+Database Setup
+Initialize the database using Prisma:
 
-Prisma as our ORM: Leveraging Prisma for robust and type-safe database interactions.
+```
+npx prisma migrate dev
+Generate Prisma client:
+```
 
+```
+npx prisma generate
+```
+Running the Development Server
+Start the development server locally:
 
-100% Written in TypeScript: Entirely developed using TypeScript for enhanced maintainability and scalability.
+```
+npm run dev
+```
+Open the application in your browser:
 
+```
+http://localhost:3000
+```
+Testing
+The project includes comprehensive unit tests. To run tests, use:
+
+```
+npm test
+```
+
+🌐 Deployment
+Deploying to Vercel
+Make sure you have the Vercel CLI installed and logged in:
+
+```
+npm i -g vercel
+```
+vercel login
+Deploy the application:
+
+```
+vercel --prod
+```
+Set environment variables in the Vercel dashboard for API keys and configurations.
+
+Stripe Webhooks
+Set up Stripe webhooks for real-time updates:
+
+```
+stripe listen --forward-to http://localhost:3000/api/webhooks/stripe
+```
+# Acknowledgments
+Next.js Documentation: For comprehensive guidance on building a Next.js app.
+Stripe: For seamless payment processing and subscription management.
+LangChain & Pinecone: For AI memory and vector storage solutions.
+Prisma: For simplifying database management with a type-safe ORM.
+Vercel: For effortless deployment and hosting.
